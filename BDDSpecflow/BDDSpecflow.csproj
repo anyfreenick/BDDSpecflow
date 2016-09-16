@@ -66,19 +66,30 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Selenium\PageObjects\LoginPage.cs" />
+    <Compile Include="Selenium\PageObjects\MainPage.cs" />
     <Compile Include="Selenium\UnitTest1.cs" />
     <Compile Include="Selenium\WebDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specflow\Features\Cart.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cart.feature</DependentUpon>
+    </Compile>
     <Compile Include="Specflow\Features\LoginNegative.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginNegative.feature</DependentUpon>
     </Compile>
-    <Compile Include="Specflow\StepDefenitions\LoginNegative.cs" />
+    <Compile Include="Specflow\StepDefenitions\CartSteps.cs" />
+    <Compile Include="Specflow\StepDefenitions\LoginNegativeSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Specflow\Features\Cart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Cart.feature.cs</LastGenOutput>
+    </None>
     <None Include="Specflow\Features\LoginNegative.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginNegative.feature.cs</LastGenOutput>

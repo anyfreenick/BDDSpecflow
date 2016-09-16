@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BDDSpecflow.Specflow.StepDefenitions
 {
     [Binding]
-    public sealed class LoginNegative
+    public sealed class LoginNegativeSteps
     {
 
         static WebDriver driver;
