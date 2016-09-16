@@ -23,7 +23,6 @@ namespace BDDSpecflow.Specflow.StepDefenitions
         public void WhenEbaySiteIsOpen()
         {
             mainpage.Open();
-            mainpage.SwitchToEnglish();
         }
         
         [When(@"Jewelry Sets paragraph is opened")]

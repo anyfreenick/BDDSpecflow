@@ -22,6 +22,7 @@ namespace BDDSpecflow.Selenium.PageObjects
         {
             _driver.Navigate().GoToUrl(_url);
             _driver.Manage().Window.Maximize();
+            SwitchToEnglish();
         }
 
         private IWebElement LanguageLink
@@ -31,10 +32,20 @@ namespace BDDSpecflow.Selenium.PageObjects
 
         private IWebElement EnglishLangLink
         {
-            get { return _driver.FindElement(By.Id("gh-eb-Geo-a-en")); }
+            get { return _driver.FindElement(By.Id("gh-eb-Geo-a-en")); }            
         }
 
-        public void SwitchToEnglish()
+        private IWebElement FashionLink
+        {
+            get { return _driver.FindElement(By.XPath("//a[text() = 'Fashion']/..")); }
+        }
+        
+        private IWebElement JewelryAndWatches
+        {
+            get { return _driver.FindElement(By.XPath("//a[@title = 'Fashion - Jewelry & Watches']")); }
+        }   
+
+        private void SwitchToEnglish()
         {
             LanguageLink.Click();
             EnglishLangLink.Click();
@@ -42,7 +53,8 @@ namespace BDDSpecflow.Selenium.PageObjects
 
         public void OpenJewlryParagraph()
         {
-
+            IJavaScriptExecutor js = _driver as IJavaScriptExecutor;
+            js.ExecuteScript("document.querySelector('a[title=\"Fashion - Jewelry & Watches\"]').click()");
         }
     }
 }
