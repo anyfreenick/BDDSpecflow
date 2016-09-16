@@ -4,7 +4,7 @@
 @LoginNegative
 Scenario Outline: Sing In with empty field
 
-Given 	Aliexpress Sign In page is open
+Given 	Ebay Sign In page is open
 When 	I set Account "<account>"
 And     I set Password "<psw>"
 And     I click SignIn button

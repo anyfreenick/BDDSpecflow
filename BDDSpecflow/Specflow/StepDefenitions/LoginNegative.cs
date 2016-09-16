@@ -12,9 +12,8 @@ namespace BDDSpecflow.Specflow.StepDefenitions
         static WebDriver driver;
         LoginPage loginpage;
 
-        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-        [Given]
-        public void GivenAliexpressSignInPageIsOpen()
+        [Given(@"Ebay Sign In page is open")]
+        public void GivenEbaySignInPageIsOpen()
         {
             driver = WebDriver.GetInstance(DriverType.Chrome);
             loginpage = new LoginPage(driver.Driver);

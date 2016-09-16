@@ -80,7 +80,7 @@ namespace BDDSpecflow.Specflow.Features
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 7
-testRunner.Given("Aliexpress Sign In page is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("Ebay Sign In page is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
 testRunner.When(string.Format("I set Account \"{0}\"", account), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
