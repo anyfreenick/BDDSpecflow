@@ -69,15 +69,22 @@
     <Compile Include="Selenium\UnitTest1.cs" />
     <Compile Include="Selenium\WebDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specflow\Features\LoginNegative.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginNegative.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Specflow\StepDefenitions\LoginNegative.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Specflow\Features\LoginNegative.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginNegative.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Specflow\Features\" />
-    <Folder Include="Specflow\StepDefenitions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
