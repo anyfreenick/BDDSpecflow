@@ -15,12 +15,21 @@ namespace BDDSpecflow.Selenium.PageObjects
         public FineJewelryPage(IWebDriver driver)
         {
             _driver = driver;
-            
+        }
+
+        private IWebElement PlatinumCheckBox
+        {
+            get { return _driver.FindElement(By.Id("e1-17")); }
         }
 
         public List<IWebElement> Items
         {
             get { return _driver.FindElements(By.XPath("//a[contains(@class,'vip')]")).ToList(); }
+        }
+
+        public void SetMetal()
+        {
+            PlatinumCheckBox.Click();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace BDDSpecflow.Selenium
             mainpage.Open();
             mainpage.OpenJewlryParagraph();
             FineJewelryPage jewelPage = new JewelryAndWatchesPage(driver.Driver).OpenFineJewelryPage();
-            jewelPage.Items[1].Click();
+            jewelPage.SetMetal();
         }
     }
 }
