@@ -5,9 +5,9 @@
 Scenario: Put one item into cart
 	When Ebay site is open
 	And  Jewelry Sets paragraph is opened
+	And  Metal color is set
 	And  Any item is chosen
 	And  Information page of the product is opened
-	And  Metal color is set
 	And  Quantity of the product is 1
 	And  The product is added into the cart
     Then There is/are 1 item/items in the cart
@@ -17,9 +17,9 @@ Scenario: Put one item into cart
 Scenario: Put several goods of one name into the cart
 	When Ebay site is open
 	And  Jewelry Sets paragraph is opened
+	And  Metal color is set
 	And  Any item is chosen
 	And  Information page of the product is opened
-	And  Metal color is set
 	And  Quantity of the product is 3
 	And  The product is added into the cart
 	Then There is/are 1 item/items in the cart

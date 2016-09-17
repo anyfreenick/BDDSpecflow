@@ -28,9 +28,16 @@ namespace BDDSpecflow.Specflow.StepDefenitions
         [When(@"Jewelry Sets paragraph is opened")]
         public void WhenJewelrySetsParagraphIsOpened()
         {
+            mainpage.OpenJewlryParagraph();
+            FineJewelryPage jewelPage = new JewelryAndWatchesPage(driver.Driver).OpenFineJewelryPage();
+        }
+
+        [When(@"Metal color is set")]
+        public void WhenMetalColorIsSet()
+        {
             ScenarioContext.Current.Pending();
         }
-        
+
         [When(@"Any item is chosen")]
         public void WhenAnyItemIsChosen()
         {
@@ -43,11 +50,6 @@ namespace BDDSpecflow.Specflow.StepDefenitions
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"Metal color is set")]
-        public void WhenMetalColorIsSet()
-        {
-            ScenarioContext.Current.Pending();
-        }
         
         [When(@"Quantity of the product is (.*)")]
         public void WhenQuantityOfTheProductIs(int p0)

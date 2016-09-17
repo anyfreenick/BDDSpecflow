@@ -65,6 +65,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Selenium\PageObjects\FineJewelryPage.cs" />
+    <Compile Include="Selenium\PageObjects\JewelryAndWatchesPage.cs" />
     <Compile Include="Selenium\PageObjects\LoginPage.cs" />
     <Compile Include="Selenium\PageObjects\MainPage.cs" />
     <Compile Include="Selenium\UnitTest1.cs" />
