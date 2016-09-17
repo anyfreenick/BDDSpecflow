@@ -6,8 +6,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-#UnitTests for debug purpose
-UnitTest1.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
