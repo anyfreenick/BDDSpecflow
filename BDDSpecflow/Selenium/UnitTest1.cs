@@ -18,6 +18,10 @@ namespace BDDSpecflow.Selenium
             mainpage.OpenJewlryParagraph();
             FineJewelryPage jewelPage = new JewelryAndWatchesPage(driver.Driver).OpenFineJewelryPage();
             jewelPage.SetMetal();
+            Assert.IsTrue(jewelPage.MetalSet(), "Error while selecting metal");
+            ItemInfoPage iteminfo = jewelPage.OpenItemInfoPage(5);
+            string str = iteminfo.GetItemName();
+            iteminfo.AddToCart();
         }
     }
 }

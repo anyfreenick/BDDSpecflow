@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 using BDDSpecflow.Selenium;
 using BDDSpecflow.Selenium.PageObjects;
@@ -9,14 +10,20 @@ namespace BDDSpecflow.Specflow.StepDefenitions
     public class CartSteps
     {
 
-        static WebDriver driver;
-        static MainPage mainpage;
+        private static WebDriver driver;
+        private static MainPage mainpage;
+        private static FineJewelryPage jewelPage;
+        private static ItemInfoPage infoPage;
+        static Random rnd;
 
         [BeforeFeature]
         public static void SetupTests()
         {
             driver = WebDriver.GetInstance(DriverType.Chrome);
             mainpage = new MainPage(driver.Driver);
+            jewelPage = new FineJewelryPage(driver.Driver);
+            infoPage = new ItemInfoPage(driver.Driver);
+            rnd = new Random();
         }
 
         [When(@"Ebay site is open")]
@@ -29,30 +36,31 @@ namespace BDDSpecflow.Specflow.StepDefenitions
         public void WhenJewelrySetsParagraphIsOpened()
         {
             mainpage.OpenJewlryParagraph();
-            FineJewelryPage jewelPage = new JewelryAndWatchesPage(driver.Driver).OpenFineJewelryPage();
+            jewelPage = new JewelryAndWatchesPage(driver.Driver).OpenFineJewelryPage();
         }
 
         [When(@"Metal color is set")]
         public void WhenMetalColorIsSet()
         {
-            ScenarioContext.Current.Pending();
+            jewelPage.SetMetal();
+            Assert.IsTrue(jewelPage.MetalSet(), "Error while selecting metal type");
         }
 
         [When(@"Any item is chosen")]
         public void WhenAnyItemIsChosen()
         {
-            ScenarioContext.Current.Pending();
+            infoPage = jewelPage.OpenItemInfoPage(rnd.Next(1, 50));
         }
         
         [When(@"Information page of the product is opened")]
         public void WhenInformationPageOfTheProductIsOpened()
         {
-            ScenarioContext.Current.Pending();
+            Assert.IsTrue(infoPage.GetItemName() != null);
         }
         
         
         [When(@"Quantity of the product is (.*)")]
-        public void WhenQuantityOfTheProductIs(int p0)
+        public void WhenQuantityOfTheProductIs(int quantity)
         {
             ScenarioContext.Current.Pending();
         }
