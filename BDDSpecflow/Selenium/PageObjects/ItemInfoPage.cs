@@ -2,7 +2,7 @@
 
 namespace BDDSpecflow.Selenium.PageObjects
 {
-    class ItemInfoPage
+    public class ItemInfoPage
     {
         private IWebDriver _driver;
         
@@ -11,9 +11,34 @@ namespace BDDSpecflow.Selenium.PageObjects
             _driver = driver;
         }
 
-        private IWebElement AddToCartButton
+        public IWebElement AddToCartButton
         {
-            get { return _driver.FindElement(By.Id("isCartBtn_btn")); }
+            get
+            {
+                try
+                {
+                    return _driver.FindElement(By.Id("isCartBtn_btn"));
+                }
+                catch(NoSuchElementException)
+                {
+                    return null;
+                }
+            }
+        }
+
+        public IWebElement QtyTextBox
+        {
+            get
+            {
+                try
+                {
+                    return _driver.FindElement(By.Id("qtyTextBox"));
+                }
+                catch(NoSuchElementException)
+                {
+                    return null;
+                }
+            }
         }
 
         public CartPage AddToCart()

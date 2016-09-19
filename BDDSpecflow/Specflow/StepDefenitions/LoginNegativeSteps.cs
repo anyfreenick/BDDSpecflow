@@ -10,13 +10,18 @@ namespace BDDSpecflow.Specflow.StepDefenitions
     {
 
         static WebDriver driver;
-        LoginPage loginpage;
+        static LoginPage loginpage;
+
+        [BeforeFeature]
+        public static void SetupTests()
+        {
+            driver = WebDriver.GetInstance(DriverType.Chrome);
+            loginpage = new LoginPage(driver.Driver);
+        }
 
         [Given(@"Ebay Sign In page is open")]
         public void GivenEbaySignInPageIsOpen()
         {
-            driver = WebDriver.GetInstance(DriverType.Chrome);
-            loginpage = new LoginPage(driver.Driver);
             loginpage.Open();
         }
 

@@ -101,38 +101,6 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Put several goods of one name into the cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("severalSameItems")]
-        public virtual void PutSeveralGoodsOfOneNameIntoTheCart()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put several goods of one name into the cart", new string[] {
-                        "severalSameItems"});
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 18
- testRunner.When("Ebay site is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
- testRunner.And("Jewelry Sets paragraph is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
- testRunner.And("Metal color is set", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
- testRunner.And("Any item is chosen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
- testRunner.And("Information page of the product is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
- testRunner.And("Quantity of the product is 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
- testRunner.And("The product is added into the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.Then("There is/are 1 item/items in the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
- testRunner.And("Summary Quantity all items in the cart are equals 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Put several goods with different names into the cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cart")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SeveralDifferentItems")]
@@ -140,15 +108,15 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put several goods with different names into the cart", new string[] {
                         "SeveralDifferentItems"});
-#line 29
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 30
+#line 18
  testRunner.When("Ebay site is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
+#line 19
  testRunner.And("Jewelry Sets paragraph is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 20
  testRunner.And("3 items with different names are added into the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 21
  testRunner.Then("There is/are 3 item/items in the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

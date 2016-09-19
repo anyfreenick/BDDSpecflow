@@ -38,6 +38,11 @@ namespace BDDSpecflow.Selenium
             private set { _webdriver = value; }
             get { return _webdriver; }
         }
+
+        public void NullDriver()
+        {
+            instance = null;
+        }
     }
     public enum DriverType
     {

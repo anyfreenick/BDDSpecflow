@@ -2,7 +2,7 @@
 
 namespace BDDSpecflow.Selenium.PageObjects
 {
-    class JewelryAndWatchesPage
+    public class JewelryAndWatchesPage
     {
         private IWebDriver _driver;
 

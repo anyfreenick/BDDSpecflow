@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 
 namespace BDDSpecflow.Selenium.PageObjects
 {
-    class FineJewelryPage
+    public class FineJewelryPage
     {
         private IWebDriver _driver;
         private Random rnd = new Random();
@@ -25,7 +25,7 @@ namespace BDDSpecflow.Selenium.PageObjects
             get { return _driver.FindElement(By.Id("e1-17")); }
         }
 
-        private List<IWebElement> Items
+        public List<IWebElement> Items
         {
             get { return _driver.FindElements(By.XPath("//a[contains(@class,'vip')]")).ToList(); }
         }
